@@ -7,10 +7,10 @@ const AssetItem = ({ imageSrc, name, availability }) => {
         className="w-11 h-11 object-contain object-center"
       />
       <div className="flex flex-col gap-2 items-center justify-center">
-        <h4 className="text-2xl font-medium">{name}</h4>
+        <h4 className="text-xl font-medium">{name}</h4>
         <button
           className={`p-2 rounded-lg capitalize text-xs text-white ${
-            availability ? "bg-[#6FD791]" : "bg-red-500"
+            availability ? "bg-[#6FD791]" : "bg-[#BC3131]"
           }`}
         >
           {availability ? "available" : "unavailable"}
