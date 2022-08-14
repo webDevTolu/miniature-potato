@@ -4,7 +4,7 @@ const Logo = () => {
   return (
     <div className="flex items-baseline font-read">
       <img src={logo} alt="logo" />
-      <span className="font-semibold text-2xl">SAlytics</span>
+      <span className="font-semibold text-lg md:text-xl lg:text-2xl">SAlytics</span>
     </div>
   );
 };

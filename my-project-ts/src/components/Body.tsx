@@ -5,29 +5,15 @@ import AssetItem from "./AssetItem";
 import ErrorNotification from "./ui/ErrorNotification";
 import LoadingSpinner from "./ui/LoadingSpinner";
 import logoImage from "../assets/images/placeholderLogo.svg";
-
-interface AsaList {
-  assetId: string;
-  name: string;
-  available: boolean;
-  logo: string;
-}
-
-interface AsaListData {
-  asalist: {
-    results: AsaList[];
-  };
-}
+import AsaListData from "../models/asaList";
 
 const Body = () => {
   const { loading, error, data } = useQuery<AsaListData>(ASA_LIST);
   if (loading) return <LoadingSpinner />;
   if (error) return <ErrorNotification />;
 
-  console.log(data);
-
   return (
-    <div className="p-16 w-full grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="p-8 md:p-12 lg:p-16 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {!loading && !error && data && (
         <Fragment>
           {data.asalist.results.map((asset) => (

@@ -12,7 +12,7 @@ const Body = () => {
   if (error) return <ErrorNotification />;
 
   return (
-    <div className="p-16 w-full grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div className="p-8 md:p-12 lg:p-16 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {!loading && !error && (
         <Fragment>
           {data.asalist.results.map((asset) => (

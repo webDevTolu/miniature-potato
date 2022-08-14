@@ -6,5 +6,7 @@ interface AsaList {
 }
 
 export default interface AsaListData {
-  data: AsaList[];
+  asalist: {
+    results: AsaList[];
+  };
 }
